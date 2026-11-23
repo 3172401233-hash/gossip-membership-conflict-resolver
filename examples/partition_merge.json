@@ -1,0 +1,19 @@
+{
+  "groups": {
+    "A": [
+      {"id": "node-1", "incarnation": 5, "status": "alive", "observer": "node-1", "version": 11},
+      {"id": "node-2", "incarnation": 4, "status": "suspect", "observer": "node-1", "version": 9},
+      {"id": "node-3", "incarnation": 4, "status": "dead", "observer": "node-3", "version": 8, "cause": "voluntary"},
+      {"id": "node-4", "incarnation": 2, "status": "suspect", "observer": "node-2", "version": 7}
+    ],
+    "B": [
+      {"id": "node-1", "incarnation": 3, "status": "dead", "observer": "node-4", "version": 20, "cause": "failed"},
+      {"id": "node-2", "incarnation": 4, "status": "alive", "observer": "node-2", "version": 10},
+      {"id": "node-3", "incarnation": 4, "status": "alive", "observer": "node-1", "version": 12},
+      {"id": "node-4", "incarnation": 2, "status": "suspect", "observer": "node-1", "version": 6}
+    ]
+  },
+  "events": [
+    {"type": "partition_healed", "groups": ["A", "B"], "at": "2026-11-23T10:00:00Z"}
+  ]
+}
